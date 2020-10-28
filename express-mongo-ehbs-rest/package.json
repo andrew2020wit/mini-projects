@@ -7,12 +7,15 @@
     "start0": "node app.js",
     "start": "nodemon app.js",
     "startdev": "nodemon app.js",
+    "docker:start": "docker-compose up",
+    "docker:down": "docker-compose down",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Andrew2020WIT",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "express-handlebars": "^5.2.0"
+    "express-handlebars": "^5.2.0",
+    "mongoose": "^5.10.11"
   }
 }
