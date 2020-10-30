@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    body
+    <script>
+      let count = 1;
+      const socket = new WebSocket("ws://localhost:8081");
+
+      socket.addEventListener("open", function (event) {
+        socket.send("Hello Server!");
+      });
+
+      setInterval(() => {
+        count++;
+        socket.send(`interval client message #${count}`);
+      }, 800);
+
+      socket.addEventListener("message", function (event) {
+        console.log("Message from server ", event.data);
+        // socket.send(`client responded: Re: ${event.data}`);
+      });
+    </script>
+  </body>
+</html>
