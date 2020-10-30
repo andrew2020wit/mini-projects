@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  </head>
+  <body>
+    <h1>Wellcome to jQuery!</h2>
+    <button id="btn1">jQuery</button>
+    <button id="btn2" onclick="alert('Hi, JavaScript!'); ">JavaScript</button>
+
+    <script type="text/javascript">
+      $(function () {
+        $("#btn1").click(function () {
+          $(this).css("background-color", "red");
+          alert("Hi, jQuery!");
+        });
+      });
+    </script>
+  </body>
+</html>
