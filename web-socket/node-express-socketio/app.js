@@ -1,17 +1,17 @@
 var app = require("express")();
 var http = require("http").createServer(app);
-var io = require("socket.io")(http);
+var socketIo = require("socket.io")(http);
 
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/html/index.html");
 });
 
-io.on("connection", (socket) => {
+socketIo.on("connection", (socket) => {
   console.log(`Client with id ${socket.id} connected`);
 
   socket.on("chat message", (msg) => {
     console.log("message: " + msg);
-    io.emit("chat message", msg);
+    socketIo.emit("chat message", msg);
   });
 });
 
