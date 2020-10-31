@@ -1,17 +1,20 @@
 const WebSocket = require("ws");
 
-const wss = new WebSocket.Server({ port: 8081 });
+const webSocketServer = new WebSocket.Server({ port: 8081 });
 
-let count = 1;
-
-wss.on("connection", function connection(ws) {
-  ws.on("message", function incoming(message) {
+webSocketServer.on("connection", function connection(webSocket) {
+  webSocket.on("message", function incoming(message) {
     console.log("received: %s", message);
-    // ws.send(`server responded: re: ${message}`);
   });
-
-  setInterval(() => {
+  let count = 0;
+  sender();
+  function sender() {
     count++;
-    ws.send(`server interval send #${count}`);
-  }, 1000);
+    webSocket.send(`server interval send #${count}`);
+    if (count < 5) {
+      setTimeout(() => sender(), 1000);
+    } else {
+      webSocket.close();
+    }
+  }
 });
