@@ -2,10 +2,26 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Counter from "../views/counter";
 import Home from "../views/Home.vue";
+import StateModificator from "../views/state-modificator";
+import StateViewer from "../views/state-viewer";
 
 Vue.use(VueRouter);
 
 const routes = [
+  {
+    path: "/",
+    name: "Home",
+    component: Home,
+  },
+  {
+    path: "/state-viewer",
+    mame: "StateViewer",
+    component: StateViewer,
+  },
+  {
+    path: "/state-modificator",
+    component: StateModificator,
+  },
   {
     path: "/",
     name: "Home",

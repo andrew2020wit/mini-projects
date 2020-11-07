@@ -1,9 +1,19 @@
 <template>
   <div>
-    <p>Counter: {{ count }}</p>
+    <div>
+      <b-card title="Counter" style="max-width: 20rem;" class="mb-2">
+        <b-card-text>
+          <p>{{ count }}</p>
+        </b-card-text>
+
+        <b-button variant="danger" @click="decrement"> | ---- | </b-button>
+        <b-button variant="success" @click="increment"> | ++++ | </b-button>
+      </b-card>
+    </div>
+
     <p>
-      <b-button variant="danger" @click="decrement"> | ---- | </b-button>
-      <b-button variant="success" @click="increment"> | ++++ | </b-button>
+      <!-- <b-button variant="danger" @click="decrement"> | ---- | </b-button>
+      <b-button variant="success" @click="increment"> | ++++ | </b-button> -->
     </p>
   </div>
 </template>
