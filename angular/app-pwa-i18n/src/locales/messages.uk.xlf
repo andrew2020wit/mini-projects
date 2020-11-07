@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="4342ef564d085fd3fa0607cb2ce6c1280706d59b" datatype="html">
+        <source> app component</source>
+        <target>Ангуляр інтернет-додаток</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <note priority="1" from="description">app component header</note>
+      </trans-unit>
+      <trans-unit id="a81c80828caf1c5bf6db0c48c09c48288715d8fd" datatype="html">
+        <source>Home</source>
+        <target>Додому</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <note priority="1" from="description"> go to home</note>
+        <note priority="1" from="meaning">home </note>
+      </trans-unit>
+      <trans-unit id="5b0eda6e174bbea282850f0d49fb35f99c0546bd" datatype="html">
+        <source>/http-get</source>
+        <target>Приклад http-запиту</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <note priority="1" from="description">http-get component name</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

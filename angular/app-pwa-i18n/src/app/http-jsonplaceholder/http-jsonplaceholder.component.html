@@ -1,0 +1,31 @@
+<h1>http-jsonplaceholder: CRUD </h1>
+<p>httpAddressJPH: {{httpAddressJPH}}</p>
+<div class="container float">
+  <div *ngIf="isLoaded; else loadingBlock" class="float">
+    <table class="float">
+      <caption>Users</caption>
+      <tr>
+        <th>id</th>
+        <th>Name</th>
+        <th>e-mail</th>
+      </tr>
+      <tr *ngFor="let user of usersJPH">
+        <td> {{user.id}} </td>
+        <td> {{user.name}} </td>
+        <td> {{user.email}} </td>
+      </tr>
+    </table>
+  </div>
+  <ng-template #loadingBlock>
+    <div style="width: 400px; height: 200px;
+     background-color: #EEEEEE; margin: auto" class="float">
+      <p style="margin: 2rem">Loading...</p>
+      <div *ngIf="errorMessage; else matSpinner">
+        <p style="color: red;"> Http-error: {{errorMessage}}</p>
+      </div>
+      <ng-template #matSpinner>
+        <mat-spinner diameter="50" color="primary" style="margin: auto"></mat-spinner>
+      </ng-template>
+    </div>
+  </ng-template>
+</div>
