@@ -34,3 +34,7 @@ jQuery: hello world
 ### React Poligon
 
 simple react-application
+
+# Webpack
+
+Webpack Poligon
